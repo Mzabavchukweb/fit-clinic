@@ -182,6 +182,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -192,6 +193,8 @@ body {
     background-color: var(--color-ivory);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    position: relative;
 }
 
 img {
@@ -319,6 +322,7 @@ p {
     letter-spacing: var(--font-h1-letter-spacing);
     line-height: var(--font-h1-line-height);
     color: var(--font-h1-color);
+    white-space: nowrap;
 }
 
 .display-section {
@@ -438,7 +442,7 @@ p {
     left: 0;
     right: 0;
     height: var(--header-height);
-    z-index: 1000;
+    z-index: 9999;
     background: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -1009,24 +1013,9 @@ p {
 
 
 
-/* Floating CTA */
+/* Floating CTA - Hidden */
 .floating-cta {
-    position: fixed;
-    bottom: var(--space-lg);
-    right: var(--space-lg);
-    z-index: 900;
-}
-
-@media (max-width: 768px) {
-    .floating-cta {
-        bottom: var(--space-md);
-        right: var(--space-md);
-        left: var(--space-md);
-    }
-
-    .floating-cta .btn {
-        width: 100%;
-    }
+    display: none;
 }
 
 /* --------------------------------------------------------------------------
