@@ -110,8 +110,11 @@
             updateSummary();
         }
 
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Scroll to booking progress (stay in section, not top of page)
+        const bookingProgress = document.querySelector('.booking-progress');
+        if (bookingProgress) {
+            bookingProgress.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
 
     // Update booking summary display
