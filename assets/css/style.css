@@ -4137,7 +4137,7 @@ body::before {
     cursor: pointer;
     padding: 0.5rem;
     color: var(--color-text);
-    transition: all var(--transition-base);
+    transition: all 0.3s ease;
     margin-right: 1rem;
     display: flex;
     align-items: center;
@@ -4180,7 +4180,7 @@ body::before {
     position: relative;
     max-width: 640px;
     margin: 8vh auto;
-    background: var(--color-bg);
+    background: #FFFFFF;
     border-radius: 20px;
     box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.35);
     overflow: hidden;
@@ -4297,13 +4297,13 @@ body::before {
 
 .search-tag {
     padding: 0.5rem 1rem;
-    background: var(--color-powder-pink-bg);
+    background: #FCF0EF;
     border: 1px solid var(--color-powder-pink-accent);
     border-radius: 100px;
     font-size: 0.85rem;
     color: var(--color-text);
     cursor: pointer;
-    transition: all var(--transition-base);
+    transition: all 0.3s ease;
 }
 
 .search-tag:hover {
@@ -4371,7 +4371,7 @@ body::before {
 
 .search-result:hover,
 .search-result.selected {
-    background: var(--color-powder-pink-bg);
+    background: #FCF0EF;
 }
 
 .search-result.selected {
