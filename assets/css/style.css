@@ -532,7 +532,7 @@ p {
 /* Hide mobile-only elements on desktop */
 .nav__logo-mobile,
 .nav__cta-mobile,
-.nav__close-hint {
+.nav__close-btn {
     display: none;
 }
 
@@ -875,21 +875,30 @@ p {
         transform: rotate(-45deg) translateY(0);
     }
 
-    /* Close hint text */
-    .nav__close-hint {
-        display: block;
+    /* Close button */
+    .nav__close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
-        top: 35px;
+        top: 25px;
         right: var(--container-padding);
-        color: var(--color-text-muted);
-        font-size: 0.65rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        color: var(--color-text);
+        cursor: pointer;
         opacity: 0;
-        transition: opacity 0.4s ease 0.5s;
+        transition: opacity 0.3s ease 0.2s, color 0.3s ease;
+        z-index: 10;
     }
 
-    .nav.active .nav__close-hint {
+    .nav__close-btn:hover {
+        color: var(--color-powder-pink-accent);
+    }
+
+    .nav.active .nav__close-btn {
         opacity: 1;
     }
 }
@@ -4237,14 +4246,25 @@ body::before {
     color: var(--color-text-muted);
 }
 
-.search-modal__shortcut {
-    font-size: 0.7rem;
-    padding: 0.35rem 0.6rem;
-    background: rgba(0, 0, 0, 0.06);
-    border-radius: 6px;
+.search-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
     color: var(--color-text-muted);
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 10;
+}
+
+.search-modal__close:hover {
+    color: var(--color-text);
 }
 
 .search-modal__results {
@@ -4440,10 +4460,6 @@ body::before {
     }
 
     .search-modal__nav-hint {
-        display: none;
-    }
-
-    .search-modal__shortcut {
         display: none;
     }
 }

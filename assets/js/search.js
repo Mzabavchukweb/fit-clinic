@@ -131,6 +131,11 @@
         modal.innerHTML = `
             <div class="search-modal__backdrop"></div>
             <div class="search-modal__content">
+                <button class="search-modal__close" aria-label="Zamknij">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
                 <div class="search-modal__header">
                     <div class="search-modal__input-wrapper">
                         <svg class="search-modal__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -138,7 +143,6 @@
                             <path d="m21 21-4.35-4.35"/>
                         </svg>
                         <input type="text" class="search-modal__input" id="search-input" placeholder="Szukaj zabiegów, usług, stron..." autocomplete="off" spellcheck="false">
-                        <div class="search-modal__shortcut">ESC</div>
                     </div>
                 </div>
                 <div class="search-modal__results" id="search-results">
@@ -158,7 +162,6 @@
                     <div class="search-modal__nav-hint">
                         <span class="search-key">↑↓</span> nawigacja
                         <span class="search-key">↵</span> wybierz
-                        <span class="search-key">ESC</span> zamknij
                     </div>
                 </div>
             </div>
@@ -172,6 +175,7 @@
 
         // Bind events
         modal.querySelector('.search-modal__backdrop').addEventListener('click', closeSearch);
+        modal.querySelector('.search-modal__close').addEventListener('click', closeSearch);
         searchInput.addEventListener('input', handleSearch);
         searchInput.addEventListener('keydown', handleKeyboard);
 
