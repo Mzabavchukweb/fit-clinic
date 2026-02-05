@@ -1,0 +1,25 @@
+/fit-clinic-website
+│
+├── index.html              (Strona Główna)
+├── o-nas.html              (O nas)
+├── kontakt.html            (Kontakt)
+├── cennik.html             (Cennik)
+│
+├── /uslugi                 (Folder z usługami)
+│   ├── index.html          (Lista wszystkich usług)
+│   ├── mezoterapia.html    (Single Page)
+│   ├── kobido.html         (Single Page)
+│   ├── endermologia.html   (Single Page)
+│   └── liposukcja.html     (Single Page)
+│
+├── /assets
+│   ├── /css
+│   │   ├── style.css       (Główny styl)
+│   │   └── animations.css  (Efekty scrollowania)
+│   ├── /js
+│   │   ├── main.js         (Menu, Lang switch)
+│   │   └── scroll.js       (Observer animacji)
+│   ├── /img
+│   │   ├── logo.svg
+│   │   └── /services       (Zdjęcia usług)
+│   └── /fonts              (Pliki fontu Wagon)

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Fit Clinic - Profesjonalne zabiegi medycyny estetycznej. Mezoterapia, masaż Kobido, endermologia i liposukcja kawitacyjna w sercu miasta.">
+    <meta name="keywords"
+        content="medycyna estetyczna, mezoterapia, kobido, endermologia, liposukcja, zabiegi odmładzające">
+    <title>Fit Clinic | Face & Body Sculpture - Medycyna Estetyczna</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__main">Fit Clinic</span>
+                <span class="logo__tagline">Face & Body Sculpture</span>
+            </a>
+
+            <nav class="nav" id="main-nav">
+                <!-- Mobile Logo (visible only in mobile menu) -->
+                <div class="nav__logo-mobile">
+                    <span class="logo__main">Fit Clinic</span>
+                    <span class="logo__tagline">Face & Body Sculpture</span>
+                </div>
+
+                <!-- Close hint -->
+                <span class="nav__close-hint">Zamknij</span>
+
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link active" data-translate="nav.home">Strona główna</a></li>
+                    <li><a href="pages/o-nas.html" class="nav__link" data-translate="nav.about">O nas</a></li>
+                    <li><a href="pages/uslugi/index.html" class="nav__link" data-translate="nav.services">Usługi</a></li>
+                    <li><a href="pages/cennik.html" class="nav__link" data-translate="nav.pricing">Cennik</a></li>
+                    <li><a href="pages/kontakt.html" class="nav__link" data-translate="nav.contact">Kontakt</a></li>
+                </ul>
+
+                <!-- CTA Button (visible only in mobile menu) -->
+                <div class="nav__cta-mobile">
+                    <a href="pages/rezerwacja.html" class="btn">Umów wizytę</a>
+                </div>
+
+                <div class="lang-switch">
+                    <button class="lang-switch__btn active" data-lang="pl">PL</button>
+                    <span class="lang-switch__divider">|</span>
+                    <button class="lang-switch__btn" data-lang="de">DE</button>
+                </div>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <!-- Hero Section - Full Screen Editorial -->
+        <section class="hero">
+            <div class="hero__background">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1920&q=80"
+                    alt="Abstract skin texture">
+            </div>
+            <div class="container">
+                <div class="hero__content" data-animate="fade-up">
+                    <span class="hero__eyebrow" data-translate="hero.subtitle">Medycyna estetyczna</span>
+                    <h1 class="hero__title display-hero" data-translate="hero.title">Odkryj<br>piękno</h1>
+                    <p class="hero__desc" data-translate="hero.description">
+                        Naturalne efekty, które podkreślą Twoje piękno.
+                        Profesjonalne zabiegi odmładzające.
+                    </p>
+                    <div class="hero__cta-group">
+                        <a href="pages/kontakt.html" class="btn btn--primary" data-translate="hero.cta">Umów wizytę</a>
+                        <a href="pages/uslugi/" class="btn btn--outline-light">Zobacz usługi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Teaser Section -->
+        <section class="section section--large">
+            <div class="container">
+                <div class="about-teaser">
+                    <div class="about-teaser__image" data-animate="slide-right">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80"
+                            alt="Fit Clinic wnętrze">
+                    </div>
+                    <div class="about-teaser__content" data-animate="slide-left">
+                        <span class="text-uppercase text-small mb-sm"
+                            style="display: block; color: var(--color-powder-pink-accent);">O nas</span>
+                        <h2 class="mb-md">Eksperci w dziedzinie<br>medycyny estetycznej</h2>
+                        <p class="mb-lg">
+                            W Fit Clinic łączymy najnowsze osiągnięcia medycyny estetycznej z indywidualnym podejściem
+                            do każdego pacjenta.
+                            Nasz zespół specjalistów pomoże Ci osiągnąć naturalne i długotrwałe efekty.
+                        </p>
+                        <a href="pages/o-nas.html" class="btn btn--secondary">Poznaj nas bliżej</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Metamorphosis - Premium Horizontal Gallery -->
+        <section class="section section--services">
+            <div class="container">
+                <div class="section__header section__header--centered" data-animate="fade-up">
+                    <span class="eyebrow">Metamorfoza</span>
+                    <h2 class="display-section">Nasze zabiegi</h2>
+                    <p class="section__subtitle">Odkryj gamę zabiegów, które odmienią Twój wygląd i samopoczucie</p>
+                </div>
+            </div>
+
+            <div class="services-scroll">
+                <!-- Mezoterapia -->
+                <a href="pages/uslugi/mezoterapia.html" class="service-poster" data-animate="fade-up">
+                    <div class="service-poster__arrow">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </div>
+                    <div class="service-poster__image">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=85"
+                            alt="Mezoterapia igłowa">
+                    </div>
+                    <div class="service-poster__content">
+                        <span class="service-poster__number">01</span>
+                        <h3 class="service-poster__title">Mezoterapia</h3>
+                        <p class="service-poster__desc">Głębokie nawilżenie i odmłodzenie skóry poprzez precyzyjne
+                            mikroiniekcje</p>
+                    </div>
+                </a>
+
+                <!-- Kobido -->
+                <a href="pages/uslugi/kobido.html" class="service-poster" data-animate="fade-up" data-animate-delay="100">
+                    <div class="service-poster__arrow">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </div>
+                    <div class="service-poster__image">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=85"
+                            alt="Masaż Kobido">
+                    </div>
+                    <div class="service-poster__content">
+                        <span class="service-poster__number">02</span>
+                        <h3 class="service-poster__title">Masaż Kobido</h3>
+                        <p class="service-poster__desc">Starożytna japońska technika naturalnego liftingu twarzy</p>
+                    </div>
+                </a>
+
+                <!-- Endermologia -->
+                <a href="pages/uslugi/endermologia.html" class="service-poster" data-animate="fade-up"
+                    data-animate-delay="200">
+                    <div class="service-poster__arrow">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </div>
+                    <div class="service-poster__image">
+                        <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&q=85"
+                            alt="Endermologia">
+                    </div>
+                    <div class="service-poster__content">
+                        <span class="service-poster__number">03</span>
+                        <h3 class="service-poster__title">Endermologia</h3>
+                        <p class="service-poster__desc">Zaawansowane modelowanie sylwetki i redukcja cellulitu</p>
+                    </div>
+                </a>
+
+                <!-- Liposukcja -->
+                <a href="pages/uslugi/liposukcja.html" class="service-poster" data-animate="fade-up" data-animate-delay="300">
+                    <div class="service-poster__arrow">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </div>
+                    <div class="service-poster__image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=85"
+                            alt="Liposukcja kawitacyjna">
+                    </div>
+                    <div class="service-poster__content">
+                        <span class="service-poster__number">04</span>
+                        <h3 class="service-poster__title">Liposukcja</h3>
+                        <p class="service-poster__desc">Bezinwazyjna redukcja tkanki tłuszczowej ultradźwiękami</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="container">
+                <div class="text-center mt-xl" data-animate="fade-up">
+                    <a href="pages/uslugi/index.html" class="btn btn--pill">Wszystkie zabiegi</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Trust Section (Reviews) - Horizontal Carousel -->
+        <section class="section section--large reviews-section">
+            <div class="container">
+                <div class="section__header section__header--centered" data-animate="fade-up">
+                    <span class="eyebrow">Opinie</span>
+                    <h2 class="display-section">Zaufali nam</h2>
+                    <p class="section__subtitle">Poznaj opinie naszych zadowolonych klientów</p>
+                </div>
+            </div>
+
+            <div class="reviews-scroll">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">AK</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Anna Kowalska</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Fantastyczne podejście do klienta i profesjonalizm na najwyższym
+                        poziomie. Efekty mezoterapii przerosły moje oczekiwania!"</p>
+                    <span class="review-card__date">2 tygodnie temu</span>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">MN</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Marta Nowak</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Masaż Kobido to coś niesamowitego! Po serii zabiegów moja twarz
+                        wygląda o 10 lat młodziej. Gorąco polecam!"</p>
+                    <span class="review-card__date">3 tygodnie temu</span>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">KW</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Karolina Wiśniewska</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Endermologia pomogła mi pozbyć się uporczywego cellulitu.
+                        Profesjonalna obsługa i relaksująca atmosfera."</p>
+                    <span class="review-card__date">1 miesiąc temu</span>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">JB</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Joanna Błaszczyk</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Liposukcja kawitacyjna dała niesamowite efekty! Schudłam 2 rozmiary w
+                        talii bez diety. Polecam każdej kobiecie!"</p>
+                    <span class="review-card__date">1 miesiąc temu</span>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">EP</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Ewa Pawlak</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Cudowne miejsce! Panie są bardzo miłe i kompetentne. Efekty widoczne
+                        już po pierwszym zabiegu mezoterapii."</p>
+                    <span class="review-card__date">2 miesiące temu</span>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">MS</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Magdalena Szymańska</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Regularnie korzystam z masażu Kobido i jestem zachwycona. Skóra jest
+                        jędrniejsza, a zmarszczki mniej widoczne."</p>
+                    <span class="review-card__date">2 miesiące temu</span>
+                </div>
+
+                <!-- Review 7 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">AD</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Agnieszka Dąbrowska</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Profesjonalna klinika z najnowszym sprzętem. Endermologia zdziałała
+                        cuda z moim cellulitem na udach!"</p>
+                    <span class="review-card__date">3 miesiące temu</span>
+                </div>
+
+                <!-- Review 8 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">NK</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Natalia Kozłowska</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Byłam sceptyczna, ale efekty liposukcji kawitacyjnej przekonały mnie
+                        całkowicie. Super atmosfera i fachowcy!"</p>
+                    <span class="review-card__date">3 miesiące temu</span>
+                </div>
+
+                <!-- Review 9 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">IZ</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Izabela Zając</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Fit Clinic to moja ulubiona klinika! Przemiła obsługa, czyste wnętrza
+                        i co najważniejsze - skuteczne zabiegi."</p>
+                    <span class="review-card__date">4 miesiące temu</span>
+                </div>
+
+                <!-- Review 10 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar">PL</div>
+                        <div class="review-card__info">
+                            <div class="review-card__name">Patrycja Lewandowska</div>
+                            <div class="review-card__source">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                                        fill="#4285F4" />
+                                    <path
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                                        fill="#34A853" />
+                                    <path
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                                        fill="#EA4335" />
+                                </svg>
+                                Google
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">"Po mezoterapii moja skóra wygląda jak nigdy dotąd! Nawilżona i
+                        promienna. Dziękuję całemu zespołowi!"</p>
+                    <span class="review-card__date">4 miesiące temu</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metamorphosis Gallery - Multi Before/After -->
+        <section class="metamorphosis-gallery">
+            <div class="container">
+                <div class="text-center mb-xl" data-animate="fade-up">
+                    <span class="eyebrow">Metamorfoza</span>
+                    <h2 class="display-section">Galeria efektów</h2>
+                    <p style="max-width: 500px; margin: var(--space-md) auto 0;">
+                        Prawdziwe efekty naszych zabiegów. Przesuń suwak, aby zobaczyć transformację.
+                    </p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="gallery-filters" data-animate="fade-up">
+                    <button class="gallery-filter active" data-filter="all">Wszystkie</button>
+                    <button class="gallery-filter" data-filter="twarz">Twarz</button>
+                    <button class="gallery-filter" data-filter="cialo">Ciało</button>
+                    <button class="gallery-filter" data-filter="anti-aging">Anti-aging</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <!-- Item 1: Mezoterapia (Twarz) -->
+                    <div class="gallery-item" data-category="twarz" data-animate="fade-up">
+                        <div class="before-after">
+                            <div class="before-after__image before-after__after">
+                                <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=800&q=80"
+                                    alt="Po zabiegu mezoterapii">
+                            </div>
+                            <div class="before-after__image before-after__before">
+                                <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?w=800&q=80"
+                                    alt="Przed zabiegiem mezoterapii">
+                            </div>
+                            <div class="before-after__handle">
+                                <div class="before-after__handle-circle"></div>
+                            </div>
+                            <span class="before-after__label before-after__label--before">Przed</span>
+                            <span class="before-after__label before-after__label--after">Po</span>
+                        </div>
+                        <span class="gallery-item__category">Twarz</span>
+                        <h3 class="gallery-item__title">Mezoterapia igłowa</h3>
+                    </div>
+
+                    <!-- Item 2: Kobido (Twarz, Anti-aging) -->
+                    <div class="gallery-item" data-category="twarz anti-aging" data-animate="fade-up"
+                        data-animate-delay="100">
+                        <div class="before-after">
+                            <div class="before-after__image before-after__after">
+                                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80"
+                                    alt="Po masażu Kobido">
+                            </div>
+                            <div class="before-after__image before-after__before">
+                                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80"
+                                    alt="Przed masażem Kobido">
+                            </div>
+                            <div class="before-after__handle">
+                                <div class="before-after__handle-circle"></div>
+                            </div>
+                            <span class="before-after__label before-after__label--before">Przed</span>
+                            <span class="before-after__label before-after__label--after">Po</span>
+                        </div>
+                        <span class="gallery-item__category">Twarz • Anti-aging</span>
+                        <h3 class="gallery-item__title">Masaż Kobido</h3>
+                    </div>
+
+                    <!-- Item 3: Endermologia (Ciało) -->
+                    <div class="gallery-item" data-category="cialo" data-animate="fade-up" data-animate-delay="200">
+                        <div class="before-after">
+                            <div class="before-after__image before-after__after">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
+                                    alt="Po endermologii">
+                            </div>
+                            <div class="before-after__image before-after__before">
+                                <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=800&q=80"
+                                    alt="Przed endermologią">
+                            </div>
+                            <div class="before-after__handle">
+                                <div class="before-after__handle-circle"></div>
+                            </div>
+                            <span class="before-after__label before-after__label--before">Przed</span>
+                            <span class="before-after__label before-after__label--after">Po</span>
+                        </div>
+                        <span class="gallery-item__category">Ciało</span>
+                        <h3 class="gallery-item__title">Endermologia</h3>
+                    </div>
+
+                    <!-- Item 4: Liposukcja (Ciało) -->
+                    <div class="gallery-item" data-category="cialo" data-animate="fade-up">
+                        <div class="before-after">
+                            <div class="before-after__image before-after__after">
+                                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
+                                    alt="Po liposukcji">
+                            </div>
+                            <div class="before-after__image before-after__before">
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80"
+                                    alt="Przed liposukcją">
+                            </div>
+                            <div class="before-after__handle">
+                                <div class="before-after__handle-circle"></div>
+                            </div>
+                            <span class="before-after__label before-after__label--before">Przed</span>
+                            <span class="before-after__label before-after__label--after">Po</span>
+                        </div>
+                        <span class="gallery-item__category">Ciało</span>
+                        <h3 class="gallery-item__title">Liposukcja kawitacyjna</h3>
+                    </div>
+
+                    <!-- Item 5: Botox (Twarz, Anti-aging) -->
+                    <div class="gallery-item" data-category="twarz anti-aging" data-animate="fade-up"
+                        data-animate-delay="100">
+                        <div class="before-after">
+                            <div class="before-after__image before-after__after">
+                                <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80"
+                                    alt="Po botoxie">
+                            </div>
+                            <div class="before-after__image before-after__before">
+                                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80"
+                                    alt="Przed botoxem">
+                            </div>
+                            <div class="before-after__handle">
+                                <div class="before-after__handle-circle"></div>
+                            </div>
+                            <span class="before-after__label before-after__label--before">Przed</span>
+                            <span class="before-after__label before-after__label--after">Po</span>
+                        </div>
+                        <span class="gallery-item__category">Twarz • Anti-aging</span>
+                        <h3 class="gallery-item__title">Botox</h3>
+                    </div>
+
+                    <!-- Item 6: Wypełniacze (Twarz) -->
+                    <div class="gallery-item" data-category="twarz" data-animate="fade-up" data-animate-delay="200">
+                        <div class="before-after">
+                            <div class="before-after__image before-after__after">
+                                <img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=800&q=80"
+                                    alt="Po wypełniaczach">
+                            </div>
+                            <div class="before-after__image before-after__before">
+                                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80"
+                                    alt="Przed wypełniaczami">
+                            </div>
+                            <div class="before-after__handle">
+                                <div class="before-after__handle-circle"></div>
+                            </div>
+                            <span class="before-after__label before-after__label--before">Przed</span>
+                            <span class="before-after__label before-after__label--after">Po</span>
+                        </div>
+                        <span class="gallery-item__category">Twarz</span>
+                        <h3 class="gallery-item__title">Wypełniacze</h3>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <!-- FAQ Section - Minimal Editorial -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-container">
+                    <div class="faq-header" data-animate="fade-up">
+                        <span class="eyebrow">Pytania</span>
+                        <h2 class="display-section">Często zadawane<br>pytania</h2>
+                    </div>
+
+                    <div class="faq-item" data-animate="fade-up">
+                        <button class="faq-question">
+                            <span>Jak przygotować się do zabiegu?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Przed wizytą zalecamy unikanie alkoholu i intensywnego opalania przez 48 godzin.
+                                W dniu zabiegu przyjdź z oczyszczoną skórą bez makijażu. Na konsultacji
+                                omówimy szczegółowo wszystkie zalecenia dostosowane do wybranego zabiegu.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-animate="fade-up" data-animate-delay="100">
+                        <button class="faq-question">
+                            <span>Czy zabiegi są bolesne?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Większość zabiegów jest bezbolesna lub powoduje jedynie minimalne uczucie
+                                dyskomfortu. W przypadku zabiegów inwazyjnych stosujemy znieczulenie miejscowe.
+                                Twój komfort jest dla nas priorytetem.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-animate="fade-up" data-animate-delay="200">
+                        <button class="faq-question">
+                            <span>Jak długo trwa rekonwalescencja?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Czas rekonwalescencji zależy od rodzaju zabiegu. Wiele z nich nie wymaga
+                                żadnej przerwy w codziennych aktywnościach. Na konsultacji otrzymasz
+                                szczegółowe informacje dotyczące wybranego zabiegu.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-animate="fade-up" data-animate-delay="300">
+                        <button class="faq-question">
+                            <span>Ile zabiegów potrzebuję?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Liczba zabiegów jest ustalana indywidualnie na podstawie Twoich potrzeb
+                                i oczekiwań. Niektóre efekty widoczne są już po pierwszej wizycie,
+                                inne wymagają serii zabiegów dla optymalnych rezultatów.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Instagram Feed - Infinite Marquee -->
+        <section class="instagram-marquee">
+            <div class="container">
+                <div class="text-center mb-xl" data-animate="fade-up">
+                    <span class="eyebrow">Instagram</span>
+                    <h2 class="display-section">@fitclinic</h2>
+                </div>
+            </div>
+
+            <!-- Marquee Track (no container for edge-to-edge) -->
+            <div class="instagram-marquee__track">
+                <!-- First set of images -->
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80" alt="">
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=400&q=80" alt="">
+                </div>
+                <div class="instagram-marquee__item">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section - Light Elegant -->
+        <section class="section section--cta">
+            <div class="container text-center">
+                <div data-animate="fade-up">
+                    <span class="eyebrow">Twoja metamorfoza</span>
+                    <h2 class="display-section">Gotowa na<br>metamorfozę?</h2>
+                    <p style="max-width: 500px; margin: var(--space-lg) auto var(--space-xl);">
+                        Umów się na bezpłatną konsultację i odkryj, jak możemy pomóc
+                        Ci osiągnąć wymarzone efekty.
+                    </p>
+                    <a href="rezerwacja.html" class="btn btn--magnetic">
+                        <span>Zarezerwuj<br>wizytę</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="logo footer__logo">
+                        <span class="logo__main">Fit Clinic</span>
+                        <span class="logo__tagline">Face & Body Sculpture</span>
+                    </a>
+                    <p class="footer__description">
+                        Profesjonalne zabiegi medycyny estetycznej.
+                        Naturalne efekty, które podkreślą Twoje piękno.
+                    </p>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Nawigacja</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Strona główna</a></li>
+                        <li><a href="pages/o-nas.html" class="footer__link">O nas</a></li>
+                        <li><a href="pages/uslugi/index.html" class="footer__link">Usługi</a></li>
+                        <li><a href="pages/cennik.html" class="footer__link">Cennik</a></li>
+                        <li><a href="pages/kontakt.html" class="footer__link">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Usługi</h4>
+                    <ul class="footer__links">
+                        <li><a href="pages/uslugi/mezoterapia.html" class="footer__link">Mezoterapia</a></li>
+                        <li><a href="pages/uslugi/kobido.html" class="footer__link">Masaż Kobido</a></li>
+                        <li><a href="pages/uslugi/endermologia.html" class="footer__link">Endermologia</a></li>
+                        <li><a href="pages/uslugi/liposukcja.html" class="footer__link">Liposukcja</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Kontakt</h4>
+                    <div class="footer__contact-item">ul. Przykładowa 123</div>
+                    <div class="footer__contact-item">00-001 Warszawa</div>
+                    <div class="footer__contact-item">+48 123 456 789</div>
+                    <div class="footer__contact-item">kontakt@fitclinic.pl</div>
+
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="Facebook">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social" aria-label="Instagram">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Giant Logo -->
+            <div class="footer__giant-logo">Fit Clinic</div>
+
+            <div class="footer__bottom">
+                <p>© 2026 Fit Clinic. Wszelkie prawa zastrzeżone.</p>
+                <p>Projekt i realizacja</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="kontakt.html" class="btn btn--primary">Umów wizytę</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/scroll.js"></script>
+</body>
+
+</html>

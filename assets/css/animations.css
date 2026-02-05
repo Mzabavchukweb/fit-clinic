@@ -1,0 +1,262 @@
+/* ==========================================================================
+   FIT CLINIC - Scroll Animations & Micro-interactions
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Scroll Reveal Animations
+   -------------------------------------------------------------------------- */
+
+/* Base state for animated elements */
+[data-animate] {
+    opacity: 0;
+    transition:
+        opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-animate].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Fade Up */
+[data-animate="fade-up"] {
+    transform: translateY(40px);
+}
+
+/* Fade In */
+[data-animate="fade-in"] {
+    transform: none;
+}
+
+/* Slide Left */
+[data-animate="slide-left"] {
+    transform: translateX(60px);
+}
+
+/* Slide Right */
+[data-animate="slide-right"] {
+    transform: translateX(-60px);
+}
+
+/* Scale Up */
+[data-animate="scale-up"] {
+    transform: scale(0.95);
+}
+
+/* Stagger Delays */
+[data-animate-delay="100"] {
+    transition-delay: 0.1s;
+}
+
+[data-animate-delay="200"] {
+    transition-delay: 0.2s;
+}
+
+[data-animate-delay="300"] {
+    transition-delay: 0.3s;
+}
+
+[data-animate-delay="400"] {
+    transition-delay: 0.4s;
+}
+
+[data-animate-delay="500"] {
+    transition-delay: 0.5s;
+}
+
+[data-animate-delay="600"] {
+    transition-delay: 0.6s;
+}
+
+/* --------------------------------------------------------------------------
+   Hover Micro-interactions
+   -------------------------------------------------------------------------- */
+
+/* Card Lift Effect */
+.card {
+    transition:
+        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Image Zoom on Card Hover */
+.card__image img,
+.service-card img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover .card__image img,
+.service-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Button Fill Effect */
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-powder-pink);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+
+.btn--primary::before {
+    background: var(--color-soft-brown);
+}
+
+/* Nav Link Underline Animation */
+.nav__link::after {
+    transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Price Table Row Highlight */
+.price-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+/* Accordion Smooth Open/Close */
+.accordion__content {
+    transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.accordion__icon {
+    transition: transform 0.3s ease;
+}
+
+.accordion__item.active .accordion__icon {
+    transform: rotate(45deg);
+}
+
+/* --------------------------------------------------------------------------
+   Loading States
+   -------------------------------------------------------------------------- */
+
+/* Skeleton Loading */
+.skeleton {
+    background: linear-gradient(90deg,
+            var(--color-off-white) 0%,
+            var(--color-alabaster) 50%,
+            var(--color-off-white) 100%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Page Transitions
+   -------------------------------------------------------------------------- */
+
+/* Fade in on page load */
+.page-content {
+    animation: pageEnter 0.6s ease-out;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Special Effects
+   -------------------------------------------------------------------------- */
+
+/* Parallax-like subtle movement */
+.hero__background img {
+    transition: transform 0.1s ease-out;
+}
+
+/* Floating CTA Animation */
+.floating-cta {
+    animation: floatIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Review Card Stagger */
+.review-card {
+    animation: reviewSlide 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.review-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.review-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.review-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes reviewSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    [data-animate] {
+        opacity: 1;
+        transform: none;
+    }
+}

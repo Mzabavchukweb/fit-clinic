@@ -1,0 +1,77 @@
+# PROJECT SPECIFICATION: Fit Clinic - Premium Aesthetic Medicine Web Experience
+
+## 1. ROLE & OBJECTIVE
+You are a Lead UI/UX Designer for a luxury "Medical Beauty" brand. Create a high-fidelity, multipage website design (HTML/CSS/JS structure) that feels bespoke, editorial, and expensive.
+**Goal:** Avoid generic "AI-generated" templates. The site must look like a high-end fashion magazine meets a sterile, professional clinic.
+
+## 2. BRAND IDENTITY & DESIGN SYSTEM
+* **Vibe:** Old Money, Clean Girl Aesthetic, Professional, Serene, Sculptural.
+* **Color Palette:**
+    * Backgrounds: Alabaster White (#F9F7F5), Off-White.
+    * Accents: Dusty Powder Pink (Subtle, not candy), Nude Beige, Champagne Gold (muted).
+    * Typography Ink: Deep Charcoal (#333333) or Soft Brown (no pure black).
+* **Typography:**
+    * **Primary Font (Headlines/Logo):** "Wagon" (or similar high-contrast Serif Display).
+    * **Secondary Font (Body/UI):** Clean Sans-Serif (e.g., Helvetica Now, Inter).
+* **Logo Construction:**
+    * Main: "Fit Clinic" (Font: Wagon, Bold, Wide tracking).
+    * Tagline: "Face & Body Sculpture" (Font: Wagon, Light/Regular, centered below logo).
+
+## 3. GLOBAL UI ELEMENTS
+* **Navigation:** Minimalist sticky header. Background: semi-transparent frosted glass (blur).
+* **Language Switcher:** Top-right corner. Plain text: "PL | DE". Active language bolded.
+* **Micro-interactions:** Smooth scroll reveals (fade-up). Buttons fill with color on hover.
+* **Breadcrumbs:** Essential for UX. Format: "Home / Services / [Current Page]".
+
+## 4. PAGE STRUCTURE & CONTENT REQUIREMENTS
+
+### A. HOMEPAGE (Hero & Overview)
+* **Hero Section:** Full-screen soft imagery (abstract body curves or skin texture, no faces). Headline: Large, editorial typography. CTA Button: "Umów wizytę".
+* **About Teaser:** Asymmetric layout. Text overlapping an image.
+* **Trust Section:** "Trustindex" style widget. Clean white cards with 5 gold stars, Google logo, and user avatar.
+* **Footer:** Minimalist. Columns for Links, Contact Info, Socials.
+
+### B. SERVICES LIST (Grid Layout)
+* Clean grid of 4 key categories (Face, Body, etc.).
+* Cards should use "Soft Masking" (rounded corners, no harsh borders).
+* Hover effect: Slight lift + shadow, image zooms in gently.
+
+### C. SINGLE SERVICE PAGE (Template for specific treatments)
+* **Breadcrumbs:** Visible at the top.
+* **Layout:** Split screen (Image Left / Content Right) OR Editorial Header.
+* **Content Logic:**
+    1.  **Title:** e.g., "Mezoterapia Igłowa".
+    2.  **Description:** Professional medical description.
+    3.  **Accordion/Tabs:**
+        * *Zalecenia (Recommendations)*
+        * *Przeciwwskazania (Contraindications)* - MUST be clear.
+    4.  **Gallery:** Before/After slider (optional).
+    5.  **Floating CTA:** "Book this treatment".
+
+### D. UTILITY PAGES
+* **Contact:** Google Maps embed (grayscale map style), Contact Form (minimal inputs), Address data.
+* **Price List (Cennik):** Clean table rows. Hover highlights the row.
+
+## 5. SPECIFIC CONTENT FOR GENERATION (4 CORE SERVICES)
+Please structure the service pages with this specific content data:
+
+1.  **Service: Mezoterapia Igłowa**
+    * *Focus:* Deep hydration, anti-aging.
+    * *Visual:* Close-up of dewy, hydrated skin.
+
+2.  **Service: Masaż Kobido**
+    * *Focus:* Non-surgical lifting, manual therapy.
+    * *Visual:* Hands massaging a face, spa atmosphere.
+
+3.  **Service: Endermologia**
+    * *Focus:* Body contouring, cellulite reduction.
+    * *Visual:* Body silhouette, smooth skin texture.
+
+4.  **Service: Liposukcja Kawitacyjna**
+    * *Focus:* Fat reduction, ultrasound technology.
+    * *Visual:* Medical aesthetic device, waistline focus.
+
+## 6. TECHNICAL OUTPUT
+* Produce valid **HTML5, CSS3, and Vanilla JavaScript**.
+* **Responsive:** Mobile-first approach.
+* **Performance:** Code should be lightweight. Use CSS Variables for colors.
