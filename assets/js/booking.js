@@ -119,6 +119,7 @@
         const summaryService = document.getElementById('summary-service');
         const summaryDate = document.getElementById('summary-date');
         const summaryTime = document.getElementById('summary-time');
+        const summaryPrice = document.getElementById('summary-price');
 
         // Service name mapping
         const serviceNames = {
@@ -130,8 +131,22 @@
             'konsultacja': 'Konsultacja'
         };
 
+        // Service price mapping
+        const servicePrices = {
+            'mezoterapia': 'od 400 zł',
+            'botox': 'od 600 zł',
+            'wypelniacze': 'od 800 zł',
+            'endermologia': 'od 250 zł',
+            'kobido': 'od 300 zł',
+            'konsultacja': 'Bezpłatna'
+        };
+
         if (summaryService) {
             summaryService.textContent = serviceNames[selectedService] || selectedService || '—';
+        }
+
+        if (summaryPrice) {
+            summaryPrice.textContent = servicePrices[selectedService] || '—';
         }
 
         if (summaryDate && selectedDate) {
