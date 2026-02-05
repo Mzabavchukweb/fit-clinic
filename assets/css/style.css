@@ -2914,15 +2914,15 @@ p {
 }
 
 .booking-step__number {
-    width: 48px;
-    height: 48px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     border: 2px solid var(--color-text);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 500;
 }
 
@@ -2932,9 +2932,10 @@ p {
 }
 
 .booking-step__label {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
+    margin-top: 0.5rem;
 }
 
 /* Booking Panels */
