@@ -322,7 +322,17 @@ p {
     letter-spacing: var(--font-h1-letter-spacing);
     line-height: var(--font-h1-line-height);
     color: var(--font-h1-color);
-    white-space: nowrap;
+}
+
+/* Mobile: hide br and nowrap */
+@media (max-width: 768px) {
+    .display-hero br {
+        display: none;
+    }
+
+    .display-hero {
+        white-space: nowrap;
+    }
 }
 
 .display-section {
