@@ -14,7 +14,7 @@
         return '';
     })();
 
-    // Search data with categories and icons
+    // Search data with categories
     const searchData = [
         // Main Pages
         {
@@ -22,40 +22,35 @@
             url: pathDepth + 'index.html',
             keywords: 'strona główna home start początek',
             description: 'Profesjonalne zabiegi medycyny estetycznej',
-            category: 'Strony',
-            icon: '🏠'
+            category: 'Strony'
         },
         {
             title: 'O nas',
             url: pathDepth + 'pages/o-nas.html',
             keywords: 'o nas zespół klinika historia doświadczenie eksperci specjaliści',
             description: 'Poznaj zespół ekspertów Fit Clinic',
-            category: 'Strony',
-            icon: '👥'
+            category: 'Strony'
         },
         {
             title: 'Cennik',
             url: pathDepth + 'pages/cennik.html',
             keywords: 'cennik ceny koszt ile kosztuje opłata',
             description: 'Przejrzyste ceny wszystkich zabiegów',
-            category: 'Strony',
-            icon: '💰'
+            category: 'Strony'
         },
         {
             title: 'Rezerwacja',
             url: pathDepth + 'pages/rezerwacja.html',
             keywords: 'rezerwacja umów wizytę termin zapisz się zarezerwuj',
             description: 'Zarezerwuj wizytę online',
-            category: 'Strony',
-            icon: '📅'
+            category: 'Strony'
         },
         {
             title: 'Kontakt',
             url: pathDepth + 'pages/kontakt.html',
             keywords: 'kontakt telefon email adres lokalizacja godziny otwarcia',
             description: 'Skontaktuj się z nami',
-            category: 'Strony',
-            icon: '📞'
+            category: 'Strony'
         },
 
         // Face Treatments
@@ -64,40 +59,35 @@
             url: pathDepth + 'pages/uslugi/mezoterapia.html',
             keywords: 'mezoterapia igłowa nawilżenie odmłodzenie skóra witaminy kolagen twarz',
             description: 'Głębokie nawilżenie i odmłodzenie skóry',
-            category: 'Zabiegi na twarz',
-            icon: '💉'
+            category: 'Zabiegi na twarz'
         },
         {
             title: 'Masaż Kobido',
             url: pathDepth + 'pages/uslugi/kobido.html',
             keywords: 'kobido masaż twarzy lifting naturalny japoński anti-aging',
             description: 'Japoński masaż liftingujący twarz',
-            category: 'Zabiegi na twarz',
-            icon: '🙌'
+            category: 'Zabiegi na twarz'
         },
         {
             title: 'Botox',
             url: pathDepth + 'pages/uslugi/botox.html',
             keywords: 'botox toksyna botulinowa zmarszczki czoło kurze łapki mimiczne',
             description: 'Redukcja zmarszczek mimicznych',
-            category: 'Zabiegi na twarz',
-            icon: '✨'
+            category: 'Zabiegi na twarz'
         },
         {
             title: 'Wypełniacze',
             url: pathDepth + 'pages/uslugi/wypelniacz.html',
             keywords: 'wypełniacze kwas hialuronowy usta policzki modelowanie objętość',
             description: 'Modelowanie rysów twarzy',
-            category: 'Zabiegi na twarz',
-            icon: '💋'
+            category: 'Zabiegi na twarz'
         },
         {
             title: 'Peeling chemiczny',
             url: pathDepth + 'pages/uslugi/peeling.html',
             keywords: 'peeling chemiczny złuszczanie odnowa skóry glikolowy',
             description: 'Profesjonalne peelingi dla odnowy skóry',
-            category: 'Zabiegi na twarz',
-            icon: '🧴'
+            category: 'Zabiegi na twarz'
         },
 
         // Body Treatments
@@ -106,16 +96,14 @@
             url: pathDepth + 'pages/uslugi/endermologia.html',
             keywords: 'endermologia cellulit modelowanie ciała lpg masaż wbakum',
             description: 'Skuteczna walka z cellulitem',
-            category: 'Zabiegi na ciało',
-            icon: '💪'
+            category: 'Zabiegi na ciało'
         },
         {
             title: 'Lipoliza',
             url: pathDepth + 'pages/uslugi/liposukcja.html',
             keywords: 'lipoliza liposukcja redukcja tkanki tłuszczowej odchudzanie',
             description: 'Nieinwazyjne usuwanie tkanki tłuszczowej',
-            category: 'Zabiegi na ciało',
-            icon: '🔥'
+            category: 'Zabiegi na ciało'
         },
 
         // Services Overview
@@ -124,8 +112,7 @@
             url: pathDepth + 'pages/uslugi/index.html',
             keywords: 'usługi zabiegi oferta katalog wszystkie',
             description: 'Pełna oferta zabiegów medycyny estetycznej',
-            category: 'Strony',
-            icon: '📋'
+            category: 'Strony'
         }
     ];
 
@@ -315,7 +302,6 @@
         if (scored.length === 0) {
             searchResults.innerHTML = `
                 <div class="search-modal__no-results">
-                    <div class="search-modal__no-results-icon">🔍</div>
                     <div class="search-modal__no-results-text">Brak wyników dla "<strong>${escapeHtml(query)}</strong>"</div>
                     <div class="search-modal__no-results-hint">Spróbuj innego słowa kluczowego</div>
                 </div>
@@ -341,7 +327,6 @@
             items.forEach((item) => {
                 html += `
                     <a href="${item.url}" class="search-result" data-index="${globalIndex}">
-                        <span class="search-result__icon">${item.icon}</span>
                         <div class="search-result__content">
                             <div class="search-result__title">${highlightMatch(item.title, query)}</div>
                             <div class="search-result__desc">${highlightMatch(item.description, query)}</div>

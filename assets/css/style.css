@@ -4378,17 +4378,7 @@ body::before {
     outline: 2px solid var(--color-powder-pink-accent);
 }
 
-.search-result__icon {
-    font-size: 1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.04);
-    border-radius: 10px;
-    flex-shrink: 0;
-}
+
 
 .search-result__content {
     flex: 1;
