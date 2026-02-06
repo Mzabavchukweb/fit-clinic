@@ -41,28 +41,31 @@
 }
 
 :root {
-    /* Colors - Strict Light Palette (NO DARK BACKGROUNDS) */
-    --color-ivory: #FDFCF8;
-    /* Primary background */
-    --color-cream: #F7F5F0;
-    /* Footer/Section background */
-    --color-sand: #F5F2ED;
-    /* Subtle variation */
-    --color-powder-blush: #FCF0EF;
-    /* Soft pink accent */
-    --color-powder-pink: #F5E1E0;
-    --color-powder-pink-accent: #E8C7C5;
-    --color-champagne-gold: #C9A96E;
+    /* Colors - Warm & Feminine Lilac-Rose Palette */
+    --color-ivory: #FFF9FB;
+    /* Primary background - creamy white */
+    --color-cream: #FFF9FB;
+    /* Clean creamy white for cards/sections */
+    --color-sand: #F8F2F5;
+    /* Very subtle pink tint */
+    --color-powder-blush: #F2D4E0;
+    /* Dusty Rose - secondary backgrounds, decorative */
+    --color-powder-pink: #C8A2C8;
+    /* Main lilac - for hero sections, accents */
+    --color-powder-pink-accent: #E8C0D0;
+    /* Lighter rose accent */
+    --color-champagne-gold: #7A5C6B;
+    /* Warm brownish violet - buttons/CTAs */
 
     /* Text Colors */
-    --color-text: #4A4846;
-    /* Deep Warm Grey - Primary (never pure black) */
-    --color-text-light: #6B6968;
-    --color-text-muted: #8A8887;
-    --color-text-body: #555555;
-    /* Neutral Grey for body text */
+    --color-text: #7A5C6B;
+    /* Warm brownish violet - Primary text */
+    --color-text-light: #9A7C8B;
+    --color-text-muted: #B09CA8;
+    --color-text-body: #6A4C5B;
+    /* Body text - slightly darker */
     --color-white: #FFFFFF;
-    --color-border: rgba(74, 72, 70, 0.08);
+    --color-border: rgba(122, 92, 107, 0.1);
 
     /* Legacy aliases for compatibility */
     --color-alabaster: var(--color-ivory);
@@ -461,25 +464,43 @@ p {
 }
 
 .header.is-scrolled {
-    background: rgba(253, 252, 248, 0.88);
+    background: rgba(255, 249, 251, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
 }
 
-/* White header on hero (mobile) - before scroll */
-@media (max-width: 992px) {
+/* White header on hero - before scroll */
+.header:not(.is-scrolled) .logo__main,
+.header:not(.is-scrolled) .logo__tagline {
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
 
-    .header:not(.is-scrolled) .logo__main,
-    .header:not(.is-scrolled) .logo__tagline {
-        color: #ffffff;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    }
+.header:not(.is-scrolled) .nav__link {
+    color: rgba(255, 255, 255, 0.9);
+}
 
-    .header:not(.is-scrolled) .menu-toggle__bar {
-        background: #ffffff;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    }
+.header:not(.is-scrolled) .nav__link:hover,
+.header:not(.is-scrolled) .nav__link.active {
+    color: #ffffff;
+}
+
+.header:not(.is-scrolled) .lang-switch__btn {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header:not(.is-scrolled) .lang-switch__btn.active {
+    color: #ffffff;
+}
+
+.header:not(.is-scrolled) .menu-toggle__bar {
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header:not(.is-scrolled) .search-trigger {
+    color: #ffffff;
 }
 
 .header__inner {
@@ -637,7 +658,7 @@ p {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: #FDFCF8;
+        background: #FFF9FB;
         z-index: 10000;
         display: flex;
         flex-direction: column;
@@ -991,7 +1012,7 @@ p {
 .hero {
     position: relative;
     min-height: 100vh;
-    background: var(--color-ivory);
+    background: #C8A2C8;
     overflow: hidden;
 }
 
@@ -1029,10 +1050,10 @@ p {
     inset: 0;
     /* Wzmocniony gradient dla lepszego kontrastu tekstu (WCAG AA) */
     background: linear-gradient(to right,
-            var(--color-ivory) 0%,
-            rgba(253, 252, 248, 0.95) 25%,
-            rgba(253, 252, 248, 0.75) 50%,
-            rgba(253, 252, 248, 0.4) 70%,
+            #C8A2C8 0%,
+            rgba(200, 162, 200, 0.95) 25%,
+            rgba(200, 162, 200, 0.75) 50%,
+            rgba(200, 162, 200, 0.4) 70%,
             transparent 90%);
     z-index: 2;
 }
@@ -1065,7 +1086,7 @@ p {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.4em;
-    color: var(--color-text-muted);
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: var(--space-lg);
 }
 
@@ -1076,10 +1097,10 @@ p {
     /* Slightly bolder */
     line-height: 0.95;
     letter-spacing: -0.02em;
-    color: var(--color-text);
+    color: #FFFFFF;
     margin-bottom: var(--space-lg);
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
-    /* Stronger halo for readability */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle shadow for depth */
     opacity: 0;
     animation: fadeInUp 1s ease forwards 0.3s;
 }
@@ -1100,7 +1121,7 @@ p {
 .hero__description {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--color-text-light);
+    color: rgba(255, 255, 255, 0.9);
     max-width: 380px;
     margin-bottom: var(--space-xl);
 }
@@ -1130,9 +1151,9 @@ p {
     .hero__background::before {
         /* Wzmocniony gradient mobile dla lepszego kontrastu (WCAG AA) */
         background: linear-gradient(to top,
-                var(--color-ivory) 0%,
-                rgba(253, 252, 248, 0.85) 35%,
-                rgba(253, 252, 248, 0.5) 55%,
+                #C8A2C8 0%,
+                rgba(200, 162, 200, 0.85) 35%,
+                rgba(200, 162, 200, 0.5) 55%,
                 transparent 75%);
     }
 
