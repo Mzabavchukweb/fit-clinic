@@ -42,16 +42,16 @@
 
 :root {
     /* Colors - Warm & Feminine Lilac-Rose Palette */
-    --color-ivory: #FFF9FB;
-    /* Primary background - creamy white */
+    --color-ivory: #E0D0E0;
+    /* Primary background - LILAC dominant */
     --color-cream: #FFF9FB;
     /* Clean creamy white for cards/sections */
     --color-sand: #F8F2F5;
     /* Very subtle pink tint */
     --color-powder-blush: #F2D4E0;
     /* Dusty Rose - secondary backgrounds, decorative */
-    --color-powder-pink: #C8A2C8;
-    /* Main lilac - for hero sections, accents */
+    --color-powder-pink: #D8B8D8;
+    /* Lighter lilac accent */
     --color-powder-pink-accent: #E8C0D0;
     /* Lighter rose accent */
     --color-champagne-gold: #7A5C6B;
@@ -464,7 +464,7 @@ p {
 }
 
 .header.is-scrolled {
-    background: rgba(255, 249, 251, 0.95);
+    background: rgba(224, 208, 224, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
@@ -500,6 +500,34 @@ p {
 }
 
 .header:not(.is-scrolled) .search-trigger {
+    color: #ffffff;
+}
+
+/* White header AFTER scroll - on lilac background */
+.header.is-scrolled .logo__main,
+.header.is-scrolled .logo__tagline {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.header.is-scrolled .nav__link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.header.is-scrolled .nav__link:hover,
+.header.is-scrolled .nav__link.active {
+    color: #ffffff;
+}
+
+.header.is-scrolled .lang-switch__btn {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header.is-scrolled .lang-switch__btn.active {
+    color: #ffffff;
+}
+
+.header.is-scrolled .search-trigger {
     color: #ffffff;
 }
 
@@ -658,7 +686,7 @@ p {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: #FFF9FB;
+        background: #E8D8E8;
         z-index: 10000;
         display: flex;
         flex-direction: column;
@@ -884,6 +912,34 @@ p {
     }
 }
 
+/* Hero Button Overrides - Light buttons on lilac background */
+.hero .btn--primary {
+    background: #FFFFFF;
+    color: #7A5C6B;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero .btn--primary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #6A4C5B;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn--outline-light {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.hero .btn--outline-light:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #7A5C6B;
+    border-color: #FFFFFF;
+}
+
 /* Magnetic Circle Button */
 .btn--magnetic {
     width: 140px;
@@ -1012,7 +1068,7 @@ p {
 .hero {
     position: relative;
     min-height: 100vh;
-    background: #C8A2C8;
+    background: #E0D0E0;
     overflow: hidden;
 }
 
@@ -1050,10 +1106,10 @@ p {
     inset: 0;
     /* Wzmocniony gradient dla lepszego kontrastu tekstu (WCAG AA) */
     background: linear-gradient(to right,
-            #C8A2C8 0%,
-            rgba(200, 162, 200, 0.95) 25%,
-            rgba(200, 162, 200, 0.75) 50%,
-            rgba(200, 162, 200, 0.4) 70%,
+            #E0D0E0 0%,
+            rgba(224, 208, 224, 0.95) 25%,
+            rgba(224, 208, 224, 0.75) 50%,
+            rgba(224, 208, 224, 0.4) 70%,
             transparent 90%);
     z-index: 2;
 }
@@ -1151,9 +1207,9 @@ p {
     .hero__background::before {
         /* Wzmocniony gradient mobile dla lepszego kontrastu (WCAG AA) */
         background: linear-gradient(to top,
-                #C8A2C8 0%,
-                rgba(200, 162, 200, 0.85) 35%,
-                rgba(200, 162, 200, 0.5) 55%,
+                #E0D0E0 0%,
+                rgba(224, 208, 224, 0.85) 35%,
+                rgba(224, 208, 224, 0.5) 55%,
                 transparent 75%);
     }
 
@@ -1282,6 +1338,30 @@ p {
     border-radius: var(--radius-xl);
     z-index: 2;
     box-shadow: var(--shadow-lg);
+}
+
+/* White text for about-teaser on lilac background */
+.about-teaser__content h2,
+.about-teaser__content h3 {
+    color: #ffffff;
+}
+
+.about-teaser__content p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-teaser__content .text-uppercase {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.about-teaser__content .btn--secondary {
+    background: #ffffff;
+    color: #7A5C6B;
+    border-color: #ffffff;
+}
+
+.about-teaser__content .btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .about-teaser__content::before {
@@ -1426,6 +1506,28 @@ p {
     background: var(--color-ivory);
     padding: var(--space-luxury) 0;
     overflow: hidden;
+}
+
+/* White text for services section on lilac background */
+.section--services .eyebrow {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section--services .display-section {
+    color: #ffffff;
+}
+
+.section--services .section__subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section--services .btn--pill {
+    background: #ffffff;
+    color: #7A5C6B;
+}
+
+.section--services .btn--pill:hover {
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .section__header {
