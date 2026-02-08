@@ -503,6 +503,23 @@ p {
     color: #5A3A4B;
 }
 
+/* Homepage specific: ALL header elements white on transparent header */
+.home-page .header:not(.is-scrolled) .logo__main,
+.home-page .header:not(.is-scrolled) .logo__tagline,
+.home-page .header:not(.is-scrolled) .nav__link,
+.home-page .header:not(.is-scrolled) .nav__link:hover,
+.home-page .header:not(.is-scrolled) .nav__link.active,
+.home-page .header:not(.is-scrolled) .lang-switch__btn,
+.home-page .header:not(.is-scrolled) .lang-switch__btn.active,
+.home-page .header:not(.is-scrolled) .menu-toggle__bar,
+.home-page .header:not(.is-scrolled) .search-trigger {
+    color: #FFFFFF;
+}
+
+.home-page .header:not(.is-scrolled) .menu-toggle__bar {
+    background: #FFFFFF;
+}
+
 /* Violet header AFTER scroll - on lavender background */
 .header.is-scrolled .logo__main,
 .header.is-scrolled .logo__tagline {
