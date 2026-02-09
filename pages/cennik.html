@@ -79,10 +79,11 @@
                     alt="Cennik zabiegów">
             </div>
             <div class="container">
-                <div class="hero__content" data-animate="fade-up">
+                <div class="hero__content">
                     <span class="hero__eyebrow">Cennik</span>
                     <h1 class="hero__title display-hero">Przejrzyste <br>ceny</h1>
-                    <p class="hero__desc">Bez ukrytych kosztów. Pakiety zabiegów w atrakcyjnych cenach.</p>
+                    <p class="hero__desc">Bez ukrytych kosztów. Pakiety
+                        zabiegów w atrakcyjnych cenach.</p>
                 </div>
             </div>
         </section>
@@ -90,7 +91,7 @@
         <!-- Price List Section -->
         <section class="section section--large">
             <div class="container">
-                <div data-animate="fade-up">
+                <div>
                     <!-- Face Treatments -->
                     <table class="price-table">
                         <thead>
@@ -103,7 +104,7 @@
                                 <th>Cena</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="stagger-children">
                             <tr>
                                 <td class="price-table__service">
                                     <strong>Mezoterapia igłowa</strong><br>
@@ -153,7 +154,7 @@
                     </table>
                 </div>
 
-                <div data-animate="fade-up" data-animate-delay="200" class="mt-xl">
+                <div class="mt-xl">
                     <!-- Body Treatments -->
                     <table class="price-table">
                         <thead>
@@ -166,7 +167,7 @@
                                 <th>Cena</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="stagger-children">
                             <tr>
                                 <td class="price-table__service">
                                     <strong>Endermologia - pojedynczy zabieg</strong><br>
@@ -217,7 +218,7 @@
                 </div>
 
                 <!-- Note -->
-                <div class="mt-xl text-center" data-animate="fade-up">
+                <div class="mt-xl text-center" data-animate="scale-reveal">
                     <div
                         style="background: var(--color-off-white); padding: var(--space-lg); border-radius: var(--radius-lg); max-width: 600px; margin: 0 auto;">
                         <h4 class="mb-sm">Pakiety indywidualne</h4>
@@ -234,14 +235,15 @@
         <!-- CTA Section - Light Elegant -->
         <section class="section section--cta">
             <div class="container text-center">
-                <div data-animate="fade-up">
-                    <span class="eyebrow">Twoja metamorfoza</span>
-                    <h2 class="display-section">Gotowa na<br>transformację?</h2>
-                    <p style="max-width: 500px; margin: var(--space-lg) auto var(--space-xl);">
+                <div>
+                    <span class="eyebrow" data-animate="blur-up">Twoja metamorfoza</span>
+                    <h2 class="display-section" data-animate="word-reveal">Gotowa na<br>transformację?</h2>
+                    <p style="max-width: 500px; margin: var(--space-lg) auto var(--space-xl);" data-animate="blur-up"
+                        data-animate-delay="200">
                         Umów się na bezpłatną konsultację i dowiedz się, które zabiegi
                         będą najlepsze dla Ciebie.
                     </p>
-                    <a href="kontakt.html" class="btn btn--magnetic">
+                    <a href="kontakt.html" class="btn btn--magnetic" data-animate="fade-up" data-animate-delay="300">
                         <span>Umów<br>konsultację</span>
                     </a>
                 </div>

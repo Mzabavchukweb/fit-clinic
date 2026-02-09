@@ -430,6 +430,8 @@
         initParallax();
         initGalleryFilter();
         initTeamCardsTap();
+        initFooterReveal();
+        initMagneticButtons();
     }
 
     // --------------------------------------------------------------------------
@@ -571,6 +573,69 @@
                 ticking = true;
             }
         }, { passive: true });
+    }
+
+    // --------------------------------------------------------------------------
+    // Parallax Footer Reveal
+    // --------------------------------------------------------------------------
+    function initFooterReveal() {
+        const footer = document.querySelector('.footer');
+        const content = document.querySelector('.page-content');
+
+        if (!footer || !content) return;
+
+        function updateFooterHeight() {
+            // Only apply on desktop/tablet where effect looks good
+            if (window.innerWidth > 768) {
+                const footerHeight = footer.offsetHeight;
+                content.style.marginBottom = `${footerHeight}px`;
+            } else {
+                content.style.marginBottom = '0';
+            }
+        }
+
+        // Initial set
+        updateFooterHeight();
+
+        // Update on resize
+        window.addEventListener('resize', updateFooterHeight);
+
+        // Update on DOM changes (e.g. accordion opening in footer if any)
+        const observer = new ResizeObserver(updateFooterHeight);
+        observer.observe(footer);
+    }
+
+    // --------------------------------------------------------------------------
+    // Magnetic Buttons
+    // --------------------------------------------------------------------------
+    function initMagneticButtons() {
+        const buttons = document.querySelectorAll('.btn--magnetic');
+
+        buttons.forEach(btn => {
+            // Ensure button has a span for the text animation
+            if (!btn.querySelector('span')) {
+                const text = btn.innerText;
+                btn.innerText = '';
+                const span = document.createElement('span');
+                span.innerText = text;
+                btn.appendChild(span);
+            }
+
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                // Move text by 30% of cursor distance
+                btn.style.setProperty('--x', `${x * 0.3}px`);
+                btn.style.setProperty('--y', `${y * 0.3}px`);
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.setProperty('--x', '0px');
+                btn.style.setProperty('--y', '0px');
+            });
+        });
     }
 
     // --------------------------------------------------------------------------

@@ -1,16 +1,84 @@
 /* ==========================================================================
-   FIT CLINIC - Scroll Animations Observer
-   Intersection Observer for reveal animations
+   FIT CLINIC - Premium Scroll Animations (Span.app-inspired)
+   Intersection Observer for reveal + word-reveal + stagger
    ========================================================================== */
 
 (function () {
     'use strict';
 
     // --------------------------------------------------------------------------
+    // Word Reveal: Wrap words in animated spans
+    // --------------------------------------------------------------------------
+    function prepareWordReveal() {
+        const wordRevealElements = document.querySelectorAll('[data-animate="word-reveal"]');
+
+        wordRevealElements.forEach(el => {
+            // Skip if already processed
+            if (el.dataset.wordsProcessed) return;
+            el.dataset.wordsProcessed = 'true';
+
+            // Get text content, preserving <br> tags
+            const html = el.innerHTML;
+            // Split on HTML tags and spaces
+            const fragments = html.split(/(<br\s*\/?>)/gi);
+
+            let wordIndex = 0;
+            const processedHTML = fragments.map(fragment => {
+                // Keep <br> tags as-is
+                if (fragment.match(/<br\s*\/?>/i)) {
+                    return fragment;
+                }
+                // Process text fragments - wrap each word
+                const words = fragment.trim().split(/\s+/).filter(w => w.length > 0);
+                return words.map(word => {
+                    const delay = wordIndex * 0.07; // 70ms between each word
+                    wordIndex++;
+                    return `<span class="word-wrap"><span class="word-inner" style="transition-delay: ${delay}s">${word}</span></span>`;
+                }).join(' ');
+            }).join('');
+
+            el.innerHTML = processedHTML;
+        });
+    }
+
+    // --------------------------------------------------------------------------
+    // Hero Word Animation (on page load)
+    // --------------------------------------------------------------------------
+    function prepareHeroWords() {
+        const heroTitles = document.querySelectorAll('.hero__title, .service-hero h1');
+
+        heroTitles.forEach(heroTitle => {
+            if (!heroTitle || heroTitle.dataset.wordsProcessed) return;
+            heroTitle.dataset.wordsProcessed = 'true';
+
+            const html = heroTitle.innerHTML;
+            const fragments = html.split(/(<br\s*\/?>)/gi);
+
+            let wordIndex = 0;
+            const processedHTML = fragments.map(fragment => {
+                if (fragment.match(/<br\s*\/?>/i)) {
+                    return fragment;
+                }
+                const words = fragment.trim().split(/\s+/).filter(w => w.length > 0);
+                return words.map(word => {
+                    const delay = 0.2 + (wordIndex * 0.1); // Start at 0.2s, 100ms between words
+                    wordIndex++;
+                    return `<span class="word-wrap"><span class="word-inner" style="animation-delay: ${delay}s">${word}</span></span>`;
+                }).join(' ');
+            }).join('');
+
+            heroTitle.innerHTML = processedHTML;
+        });
+    }
+
+    // --------------------------------------------------------------------------
     // Intersection Observer for Scroll Animations
     // --------------------------------------------------------------------------
     function initScrollAnimations() {
-        const animatedElements = document.querySelectorAll('[data-animate]');
+        // Select all animated elements: data-animate, stagger-children, line-expand
+        const animatedElements = document.querySelectorAll(
+            '[data-animate], .stagger-children, .line-expand'
+        );
 
         if (!animatedElements.length) return;
 
@@ -18,33 +86,29 @@
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         if (prefersReducedMotion) {
-            // Skip animations for users who prefer reduced motion
             animatedElements.forEach(el => {
                 el.classList.add('is-visible');
             });
             return;
         }
 
-        // Observer options
+        // Observer options — trigger when 15% visible, with slight offset
         const observerOptions = {
             root: null,
-            rootMargin: '0px 0px -10% 0px',
+            rootMargin: '0px 0px -8% 0px',
             threshold: 0.1
         };
 
-        // Create observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-
-                    // Optional: unobserve after animation (better performance)
-                    // observer.unobserve(entry.target);
+                    // Unobserve after animation for performance
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe all animated elements
         animatedElements.forEach(el => {
             observer.observe(el);
         });
@@ -63,19 +127,14 @@
                 if (entry.isIntersecting) {
                     const img = entry.target;
 
-                    // Set the src from data-src
                     img.src = img.dataset.src;
-
-                    // Handle srcset if present
                     if (img.dataset.srcset) {
                         img.srcset = img.dataset.srcset;
                     }
 
-                    // Remove data attributes
                     img.removeAttribute('data-src');
                     img.removeAttribute('data-srcset');
 
-                    // Add loaded class for fade-in effect
                     img.addEventListener('load', () => {
                         img.classList.add('is-loaded');
                     });
@@ -96,15 +155,12 @@
     // Parallax Effect (Subtle) - Desktop only
     // --------------------------------------------------------------------------
     function initParallax() {
-        // Disable parallax on mobile for stability
         const isMobile = window.matchMedia('(max-width: 992px)').matches;
         if (isMobile) return;
 
         const parallaxElements = document.querySelectorAll('[data-parallax]');
-
         if (!parallaxElements.length) return;
 
-        // Check for reduced motion preference
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             return;
         }
@@ -119,7 +175,6 @@
                         const rect = el.getBoundingClientRect();
                         const scrolled = window.pageYOffset;
 
-                        // Only apply when element is in view
                         if (rect.bottom > 0 && rect.top < window.innerHeight) {
                             const yPos = -(scrolled * speed);
                             el.style.transform = `translate3d(0, ${yPos}px, 0)`;
@@ -133,7 +188,7 @@
     }
 
     // --------------------------------------------------------------------------
-    // Stagger Animation for Grid Items
+    // Stagger Animation for Grid Items (legacy data-stagger support)
     // --------------------------------------------------------------------------
     function initStaggerAnimation() {
         const staggerContainers = document.querySelectorAll('[data-stagger]');
@@ -177,7 +232,6 @@
     }
 
     function animateCounter(element, target, duration) {
-        const start = 0;
         const startTime = performance.now();
 
         function updateCounter(currentTime) {
@@ -201,14 +255,41 @@
     }
 
     // --------------------------------------------------------------------------
+    // Smooth Scroll for Anchor Links
+    // --------------------------------------------------------------------------
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+
+    // --------------------------------------------------------------------------
     // Initialize All
     // --------------------------------------------------------------------------
     function init() {
+        // Prepare word animations first (before observer kicks in)
+        prepareWordReveal();
+        prepareHeroWords();
+
+        // Then start observers
         initScrollAnimations();
         initLazyLoading();
         initParallax();
         initStaggerAnimation();
         initCounterAnimation();
+        initSmoothScroll();
     }
 
     // Run on DOM ready

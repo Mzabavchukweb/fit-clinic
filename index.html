@@ -83,7 +83,7 @@
                 <img src="assets/hero.JPG" alt="Fit Clinic - Medycyna Estetyczna">
             </div>
             <div class="container">
-                <div class="hero__content" data-animate="fade-up">
+                <div class="hero__content">
                     <span class="hero__eyebrow" data-translate="hero.subtitle">Medycyna estetyczna</span>
                     <h1 class="hero__title display-hero" data-translate="hero.title">Odkryj <br>siebie</h1>
                     <p class="hero__desc" data-translate="hero.description">
@@ -102,11 +102,11 @@
         <section class="section section--large">
             <div class="container">
                 <div class="about-teaser">
-                    <div class="about-teaser__image" data-animate="slide-right">
+                    <div class="about-teaser__image" data-animate="scale-reveal">
                         <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80"
                             alt="Fit Clinic wnętrze">
                     </div>
-                    <div class="about-teaser__content" data-animate="slide-left">
+                    <div class="about-teaser__content" data-animate="blur-up">
                         <span class="text-uppercase text-small mb-sm"
                             style="display: block; color: var(--color-powder-pink-accent);">O nas</span>
                         <h2 class="mb-md">Eksperci w dziedzinie<br>medycyny estetycznej</h2>
@@ -121,19 +121,25 @@
             </div>
         </section>
 
+        <!-- Decorative Line -->
+        <div class="container">
+            <div class="line-expand" style="margin: 0 auto; max-width: 200px;"></div>
+        </div>
+
         <!-- Services Metamorphosis - Premium Horizontal Gallery -->
         <section class="section section--services">
             <div class="container">
-                <div class="section__header section__header--centered" data-animate="fade-up">
-                    <span class="eyebrow">Metamorfoza</span>
-                    <h2 class="display-section">Nasze zabiegi</h2>
-                    <p class="section__subtitle">Odkryj gamę zabiegów, które odmienią Twój wygląd i samopoczucie</p>
+                <div class="section__header section__header--centered">
+                    <span class="eyebrow" data-animate="fade-up">Metamorfoza</span>
+                    <h2 class="display-section" data-animate="word-reveal">Nasze zabiegi</h2>
+                    <p class="section__subtitle" data-animate="blur-up" data-animate-delay="200">Odkryj gamę zabiegów,
+                        które odmienią Twój wygląd i samopoczucie</p>
                 </div>
             </div>
 
-            <div class="services-scroll">
+            <div class="services-scroll stagger-children">
                 <!-- Mezoterapia -->
-                <a href="pages/uslugi/mezoterapia.html" class="service-poster" data-animate="fade-up">
+                <a href="pages/uslugi/mezoterapia.html" class="service-poster">
                     <div class="service-poster__arrow">
                         <svg viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -152,8 +158,7 @@
                 </a>
 
                 <!-- Kobido -->
-                <a href="pages/uslugi/kobido.html" class="service-poster" data-animate="fade-up"
-                    data-animate-delay="100">
+                <a href="pages/uslugi/kobido.html" class="service-poster">
                     <div class="service-poster__arrow">
                         <svg viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -171,8 +176,7 @@
                 </a>
 
                 <!-- Endermologia -->
-                <a href="pages/uslugi/endermologia.html" class="service-poster" data-animate="fade-up"
-                    data-animate-delay="200">
+                <a href="pages/uslugi/endermologia.html" class="service-poster">
                     <div class="service-poster__arrow">
                         <svg viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -190,8 +194,7 @@
                 </a>
 
                 <!-- Liposukcja -->
-                <a href="pages/uslugi/liposukcja.html" class="service-poster" data-animate="fade-up"
-                    data-animate-delay="300">
+                <a href="pages/uslugi/liposukcja.html" class="service-poster">
                     <div class="service-poster__arrow">
                         <svg viewBox="0 0 24 24">
                             <path d="M7 17L17 7M17 7H7M17 7V17" />
@@ -216,15 +219,19 @@
             </div>
         </section>
 
-
+        <!-- Decorative Line -->
+        <div class="container">
+            <div class="line-expand" style="margin: 0 auto; max-width: 200px;"></div>
+        </div>
 
         <!-- Trust Section (Reviews) - Horizontal Carousel -->
         <section class="section section--large reviews-section">
             <div class="container">
-                <div class="section__header section__header--centered" data-animate="fade-up">
-                    <span class="eyebrow">Opinie</span>
-                    <h2 class="display-section">Zaufali nam</h2>
-                    <p class="section__subtitle">Poznaj opinie naszych zadowolonych klientów</p>
+                <div class="section__header section__header--centered">
+                    <span class="eyebrow" data-animate="fade-up">Opinie</span>
+                    <h2 class="display-section" data-animate="word-reveal">Zaufali nam</h2>
+                    <p class="section__subtitle" data-animate="blur-up" data-animate-delay="200">Poznaj opinie naszych
+                        zadowolonych klientów</p>
                 </div>
             </div>
 
@@ -544,10 +551,11 @@
         <!-- Metamorphosis Gallery - Multi Before/After -->
         <section class="metamorphosis-gallery">
             <div class="container">
-                <div class="text-center mb-xl" data-animate="fade-up">
-                    <span class="eyebrow">Metamorfoza</span>
-                    <h2 class="display-section">Galeria efektów</h2>
-                    <p style="max-width: 500px; margin: var(--space-md) auto 0;">
+                <div class="text-center mb-xl">
+                    <span class="eyebrow" data-animate="fade-up">Metamorfoza</span>
+                    <h2 class="display-section" data-animate="word-reveal">Galeria efektów</h2>
+                    <p style="max-width: 500px; margin: var(--space-md) auto 0;" data-animate="blur-up"
+                        data-animate-delay="200">
                         Prawdziwe efekty naszych zabiegów. Przesuń suwak, aby zobaczyć transformację.
                     </p>
                 </div>
@@ -561,9 +569,9 @@
                 </div>
 
                 <!-- Gallery Grid -->
-                <div class="gallery-grid">
+                <div class="gallery-grid stagger-children">
                     <!-- Item 1: Mezoterapia (Twarz) -->
-                    <div class="gallery-item" data-category="twarz" data-animate="fade-up">
+                    <div class="gallery-item" data-category="twarz">
                         <div class="before-after">
                             <div class="before-after__image before-after__after">
                                 <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=800&q=80"
@@ -584,8 +592,7 @@
                     </div>
 
                     <!-- Item 2: Kobido (Twarz, Anti-aging) -->
-                    <div class="gallery-item" data-category="twarz anti-aging" data-animate="fade-up"
-                        data-animate-delay="100">
+                    <div class="gallery-item" data-category="twarz anti-aging">
                         <div class="before-after">
                             <div class="before-after__image before-after__after">
                                 <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&q=80"
@@ -606,7 +613,7 @@
                     </div>
 
                     <!-- Item 3: Endermologia (Ciało) -->
-                    <div class="gallery-item" data-category="cialo" data-animate="fade-up" data-animate-delay="200">
+                    <div class="gallery-item" data-category="cialo">
                         <div class="before-after">
                             <div class="before-after__image before-after__after">
                                 <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
@@ -627,7 +634,7 @@
                     </div>
 
                     <!-- Item 4: Liposukcja (Ciało) -->
-                    <div class="gallery-item" data-category="cialo" data-animate="fade-up">
+                    <div class="gallery-item" data-category="cialo">
                         <div class="before-after">
                             <div class="before-after__image before-after__after">
                                 <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
@@ -648,8 +655,7 @@
                     </div>
 
                     <!-- Item 5: Botox (Twarz, Anti-aging) -->
-                    <div class="gallery-item" data-category="twarz anti-aging" data-animate="fade-up"
-                        data-animate-delay="100">
+                    <div class="gallery-item" data-category="twarz anti-aging">
                         <div class="before-after">
                             <div class="before-after__image before-after__after">
                                 <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80"
@@ -670,7 +676,7 @@
                     </div>
 
                     <!-- Item 6: Wypełniacze (Twarz) -->
-                    <div class="gallery-item" data-category="twarz" data-animate="fade-up" data-animate-delay="200">
+                    <div class="gallery-item" data-category="twarz">
                         <div class="before-after">
                             <div class="before-after__image before-after__after">
                                 <img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=800&q=80"
@@ -700,12 +706,12 @@
         <section class="faq-section">
             <div class="container">
                 <div class="faq-container">
-                    <div class="faq-header" data-animate="fade-up">
-                        <span class="eyebrow">Pytania</span>
-                        <h2 class="display-section">Często zadawane<br>pytania</h2>
+                    <div class="faq-header">
+                        <span class="eyebrow" data-animate="fade-up">Pytania</span>
+                        <h2 class="display-section" data-animate="word-reveal">Często zadawane<br>pytania</h2>
                     </div>
 
-                    <div class="faq-item" data-animate="fade-up">
+                    <div class="faq-item" data-animate="blur-up">
                         <button class="faq-question">
                             <span>Jak przygotować się do zabiegu?</span>
                             <div class="faq-icon"></div>
@@ -719,7 +725,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item" data-animate="fade-up" data-animate-delay="100">
+                    <div class="faq-item" data-animate="blur-up" data-animate-delay="100">
                         <button class="faq-question">
                             <span>Czy zabiegi są bolesne?</span>
                             <div class="faq-icon"></div>
@@ -733,7 +739,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item" data-animate="fade-up" data-animate-delay="200">
+                    <div class="faq-item" data-animate="blur-up" data-animate-delay="200">
                         <button class="faq-question">
                             <span>Jak długo trwa rekonwalescencja?</span>
                             <div class="faq-icon"></div>
@@ -747,7 +753,7 @@
                         </div>
                     </div>
 
-                    <div class="faq-item" data-animate="fade-up" data-animate-delay="300">
+                    <div class="faq-item" data-animate="blur-up" data-animate-delay="300">
                         <button class="faq-question">
                             <span>Ile zabiegów potrzebuję?</span>
                             <div class="faq-icon"></div>
@@ -766,9 +772,9 @@
         <!-- Instagram Feed - Infinite Marquee -->
         <section class="instagram-marquee">
             <div class="container">
-                <div class="text-center mb-xl" data-animate="fade-up">
-                    <span class="eyebrow">Instagram</span>
-                    <h2 class="display-section">@fitclinic</h2>
+                <div class="text-center mb-xl">
+                    <span class="eyebrow" data-animate="fade-up">Instagram</span>
+                    <h2 class="display-section" data-animate="word-reveal">@fitclinic</h2>
                 </div>
             </div>
 
@@ -830,10 +836,11 @@
         <!-- CTA Section - Light Elegant -->
         <section class="section section--cta">
             <div class="container text-center">
-                <div data-animate="fade-up">
-                    <span class="eyebrow">Twoja metamorfoza</span>
-                    <h2 class="display-section">Gotowa na<br>metamorfozę?</h2>
-                    <p style="max-width: 500px; margin: var(--space-lg) auto var(--space-xl);">
+                <div>
+                    <span class="eyebrow" data-animate="fade-up">Twoja metamorfoza</span>
+                    <h2 class="display-section" data-animate="word-reveal">Gotowa na<br>metamorfozę?</h2>
+                    <p style="max-width: 500px; margin: var(--space-lg) auto var(--space-xl);" data-animate="blur-up"
+                        data-animate-delay="200">
                         Umów się na bezpłatną konsultację i odkryj, jak możemy pomóc
                         Ci osiągnąć wymarzone efekty.
                     </p>
